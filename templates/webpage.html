@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>shazam made by us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <body style = "background: url(https://i0.wp.com/windows10times.com/wp-content/uploads/2016/06/shazam-for-pc.png); background-size: 100%;">
+  </body>
+   <br>
+  <h2> 🆂🅷🅰🆉🅰🅼    🆈🅾🆄🆁    🆂🅾🅽🅶</h2>
+
+
+ <br>  <br>  <br>
+      <form action="/"  method="post" enctype="multipart/form-data">
+          <label for="audioFileChooser">Upload an audio file: </label><br><br>
+          <input  id="audioFileChooser" type="file" name='musicFile' onchange="readFile(this.files);" accept=".mp3">
+          <output name="ans"></output>
+          <script>
+	function readFile(files) {
+        var fileReader = new FileReader();
+        fileReader.readAsArrayBuffer(files[0]);
+        fileReader.onload = function (e) {
+            playAudioFile(e.target.result);
+            console.log(("Filename: '" + files[0].name + "'"), ("(" + ((Math.floor(files[0].size / 1024 / 1024 * 100)) / 100) + " MB)"));
+        }
+    }
+</script>
+
+
+ <br>  <br>
+    <button type="submit" class="btn btn-default">Submit</button>
+
+</div>
+</body>
+</html>
